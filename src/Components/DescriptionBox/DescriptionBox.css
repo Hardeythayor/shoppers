@@ -1,0 +1,19 @@
+.description-box {
+    margin: 120px 0;
+}
+
+.description-box  .nav-tabs .nav-item {
+    font-weight: 600;
+}
+
+.description-box .tab-content {
+    padding: 28px 15px;
+    border: 1px solid #D0D0D0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .description-box {
+        margin: 50px 0;
+    }
+}
