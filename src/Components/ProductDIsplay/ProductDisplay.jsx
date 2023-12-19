@@ -26,14 +26,14 @@ const ProductDisplay = (props) => {
             <div className="col-lg-5">
                 <div className="product-display-right">
                     <h1>{product.name}</h1>
-                    <div className="product-display-right-stars">
+                    {/* <div className="product-display-right-stars">
                         <img className='img-fluid' src={star_icon} alt="" />
                         <img className='img-fluid' src={star_icon} alt="" />
                         <img className='img-fluid' src={star_icon} alt="" /> 
                         <img className='img-fluid' src={star_dull_icon} alt="" />
                         <img className='img-fluid' src={star_dull_icon} alt="" />
                         <p>(122)</p>
-                    </div>
+                    </div> */}
                     <div className="product-display-right-prices">
                         <div className="product-display-right-price-old">${product.old_price}</div>
                         <div className="product-display-right-price-new">${product.new_price}</div>
@@ -43,7 +43,7 @@ const ProductDisplay = (props) => {
                         cupiditate modi placeat, iste tempore odit nesciunt reprehenderit commodi, 
                         consectetur officiis accusamus temporibus? Est, magnam tempore! A, saepe temporibus.
                     </div>
-                    <div className="product-display-right-size">
+                    {/* <div className="product-display-right-size">
                         <h1>Select Size</h1>
                         <div className="product-display-right-sizes">
                             <div>S</div>
@@ -52,7 +52,7 @@ const ProductDisplay = (props) => {
                             <div>XL</div>
                             <div>XXL</div>
                         </div>
-                    </div>
+                    </div> */}
                     <button className='btn btn-danger btn-lg'>BUY NOW</button>
                     <p className="product-display-right-category">
                         <span>Category: </span>

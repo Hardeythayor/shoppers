@@ -50,13 +50,17 @@
     font-size: 16px;
 }
 
+.product-display-right-description {
+    margin-bottom: 30px;
+}
+
 .product-display-right-stars p {
     margin: 0;
 }
 
 .product-display-right-prices {
     display: flex;
-    margin: 40px 0;
+    margin: 20px 0;
     gap: 30px;
     font-size: 20px;
     font-weight: 700;

@@ -11,7 +11,7 @@ const RelatedProduct = () => {
         <div className="related-product-items">
             <div className="row">
                 {product_data.map((item, i) => (
-                    <div className="col-lg-3 mb-4" key={i}>
+                    <div className="col-lg-3 col-6 mb-4" key={i}>
                         <Item 
                             id={item.id}
                             name={item.name}

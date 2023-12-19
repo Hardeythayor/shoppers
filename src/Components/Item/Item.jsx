@@ -22,6 +22,24 @@ const Item = (props) => {
             ${props.old_price}
         </div>
       </div>
+      <div className="item-warranty">
+        <div className="d-flex warranty-wrapper">
+          <i className='mdi mdi-shield-check first'></i>
+          <span>Buyer Protection</span>
+        </div>
+        <div className="d-flex warranty-wrapper">
+          <i className='mdi mdi-check-decagram second'></i>
+          <span>Authenticity Guarantee</span>
+        </div>
+        <div className="d-flex warranty-wrapper">
+          <i className='mdi mdi-file-document-check third'></i>
+          <span>Proper Documentation</span>
+        </div>
+        <div className="d-flex warranty-wrapper">
+          <i className='mdi mdi-all-inclusive-box fourth'></i>
+          <span>Insurance</span>
+        </div>
+      </div>
     </div>
   )
 }

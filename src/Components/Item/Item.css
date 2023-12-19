@@ -18,20 +18,60 @@
     gap: 30px;
 }
 
+.item-warranty {
+    margin: 7px 0;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 550;
+}
+
+.warranty-wrapper {
+    gap: 5px;
+}
+
+.warranty-wrapper .second {
+    color: rgb(1, 1, 173);
+}
+
+.warranty-wrapper .third {
+    color: rgb(150, 36, 144);
+}
+
+.warranty-wrapper .fourth {
+    color: rgb(4, 164, 200);
+}
+
 .item-price-new {
     color: #374151;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .item-price-old {
     color: #8c8c8c;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: line-through;
 }
 
 .item:hover {
     transform: scale(1.05);
     transition: .6s;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .item p {
+        margin: 5px 0px;
+        line-height: 1.4  !important;
+    }
+
+    .item-price-new, 
+    .item-price-old {
+        font-size: 14px;
+    }
+
+    .item-prices {
+        gap: 10px;
+    }
 }
