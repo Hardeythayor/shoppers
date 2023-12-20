@@ -23,19 +23,19 @@ const Item = (props) => {
         </div>
       </div>
       <div className="item-warranty">
-        <div className="d-flex warranty-wrapper">
+        <div className="d-flex warranty-wrapper align-items-center">
           <i className='mdi mdi-shield-check first'></i>
           <span>Buyer Protection</span>
         </div>
-        <div className="d-flex warranty-wrapper">
+        <div className="d-flex warranty-wrapper align-items-center">
           <i className='mdi mdi-check-decagram second'></i>
           <span>Authenticity Guarantee</span>
         </div>
-        <div className="d-flex warranty-wrapper">
+        <div className="d-flex warranty-wrapper align-items-center">
           <i className='mdi mdi-file-document-check third'></i>
           <span>Proper Documentation</span>
         </div>
-        <div className="d-flex warranty-wrapper">
+        <div className="d-flex warranty-wrapper align-items-center">
           <i className='mdi mdi-all-inclusive-box fourth'></i>
           <span>Insurance</span>
         </div>
