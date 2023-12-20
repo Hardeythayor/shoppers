@@ -20,7 +20,7 @@
 
 .item-warranty {
     margin: 7px 0;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
     font-weight: 550;
 }
@@ -74,4 +74,12 @@
     .item-prices {
         gap: 10px;
     }
+
+    .item-warranty {
+        line-height: 1.2;
+    }
+
+    .warranty-wrapper span{
+        font-size: 10px !important;
+    } 
 }
