@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 150px 0;
+    padding: 150px 0 70px;
 }
 .popular h1{
     color: #171717;
@@ -15,6 +15,7 @@
     height: 6px;
     border-radius: 10px;
     background: #252525;
+    margin-bottom: 70px;
 }
 
 .popular-item {
@@ -27,10 +28,26 @@
     width: 100%;
 }
 
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    height: auto !important;
+    width: 400px;
+}
+   
+.swiper-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
     .popular {
-        padding: 100px 0;
+        padding: 100px 0 50px;
     }
 
     .popular h1{
@@ -40,5 +57,13 @@
     .popular hr {
         width: 40%;
         height: 6px;
+    }
+    .swiper-slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .swiper-slide {
+        height: auto!important;
     }
 }

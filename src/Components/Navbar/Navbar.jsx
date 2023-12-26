@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from '../Assets/logo.png'
-import cart_icon from '../Assets/cart_icon.png'
+// import cart_icon from '../Assets/cart_icon.png'
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -13,7 +13,7 @@ const Navbar = () => {
                 <div className="container">
                 <NavLink className="navbar-brand nav-logo" to="/">
                     <img src={logo} alt="" />
-                    <p>SHOPPER</p>
+                    <p>ROLEXCOSPORT</p>
                 </NavLink>
                 <button
                     className="navbar-toggler"
@@ -50,19 +50,25 @@ const Navbar = () => {
                             </NavLink>
                             {menu === 'kids' ? <hr /> : <></>}
                         </li>
+                        <li className="nav-item" onClick={() => setMenu("unisex")}>
+                            <NavLink className="nav-link" to="/unisex">
+                                Unisex
+                            </NavLink>
+                            {menu === 'unisex' ? <hr /> : <></>}
+                        </li>
                     </ul>
-                    <div className="nav-login">
+                    {/* <div className="nav-login">
                         <NavLink className="btn btn-outline-secondary px-4" to={'/login'}>
                             Login
                         </NavLink>
-                    </div>
+                    </div> */}
                 </div>
-                <div className="nav-cart position-relative">
+                {/* <div className="nav-cart position-relative">
                     <NavLink to={'/cart'}>
                         <img src={cart_icon} alt="" className="img-fluid" width={30}/>
                         <div className="nav-cart-count">0</div>
                     </NavLink>
-                </div>
+                </div> */}
                 </div>
             </nav>
         </div>

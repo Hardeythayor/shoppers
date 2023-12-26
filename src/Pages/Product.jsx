@@ -1,25 +1,40 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import { useParams } from 'react-router-dom'
 import Breadcrumb from '../Components/Breadcrumbs/Breadcrumb'
 import ProductDisplay from '../Components/ProductDIsplay/ProductDisplay'
 import DescriptionBox from '../Components/DescriptionBox/DescriptionBox'
 import RelatedProduct from '../Components/RelatedProducts/RelatedProduct'
+import productService from '../Services/productService'
+import LoaderComponent from 'react-fullpage-custom-loader'
 
 const Product = () => {
-  const {all_products}  = useContext(ShopContext)
   const {productId} = useParams()
+  
+  const {dispatch, product, isLoading}  = useContext(ShopContext)
 
-  const product = all_products.find((p) => p.id === Number(productId))
+  const fetchSingleProduct = async() => {
+      dispatch({ type: 'IS_PENDING'})
+      const response  = await productService.fetchSingleProduct(productId)
+      dispatch({ type: 'SINGLE_PRODUCT_SUCCESS', payload: response})
+  }
+  
+  useEffect(() => {
+      fetchSingleProduct()
+  }, [productId])
 
   return (
     <div>
-      <div className="container">
+      {isLoading && (<LoaderComponent 
+          sentences={[]}
+          loaderType={'ball-triangle-path'}
+      />)}
+      {!isLoading && (<div className="container">
         <Breadcrumb product={product} />
         <ProductDisplay product={product} />
-        <DescriptionBox />
-        <RelatedProduct />
-      </div>
+        <DescriptionBox product={product}/>
+        <RelatedProduct productId={productId}/>
+      </div>)}
     </div>
   )
 }

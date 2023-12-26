@@ -63,4 +63,14 @@
         height: 40px;
         margin-bottom: 30px;
     }
+
+    .offers-right {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .offers-right img {
+        width: 170px;
+    }
 }

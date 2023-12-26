@@ -1,7 +1,7 @@
 import React from 'react'
 import './DescriptionBox.css'
 
-const DescriptionBox = () => {
+const DescriptionBox = ({product}) => {
   return (
     <div className='description-box'>
         {/* <!-- Nav tabs --> */}
@@ -17,10 +17,7 @@ const DescriptionBox = () => {
         {/* <!-- Tab panes --> */}
         <div className="tab-content">
             <div className="tab-pane container active" id="home">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quis assumenda hic accusamus quod, eligendi aliquam delectus a, 
-                    id dolores, aut omnis. Omnis, corrupti perferendis. 
-                    Assumenda dolorum aut ab eos ipsam?
+                <p>{product?.description}
                 </p>
             </div>
             <div className="tab-pane container fade" id="menu1">2</div>
