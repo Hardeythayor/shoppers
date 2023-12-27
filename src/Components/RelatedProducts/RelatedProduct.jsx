@@ -1,15 +1,14 @@
 import React, { useContext, useEffect } from 'react'
 import './RelatedProduct.css'
-import product_data from '../Assets/data'
 import Item from '../Item/Item'
 import productService from '../../Services/productService'
 import { ShopContext } from '../../Context/ShopContext'
 
 const RelatedProduct = ({productId}) => {
-    const {dispatch, similarProducts, isLoading}  = useContext(ShopContext)
+    const {dispatch, similarProducts}  = useContext(ShopContext)
 
     const fetchSimilarProduct = async() => {
-        dispatch({ type: 'IS_PENDING'})
+        // dispatch({ type: 'IS_PENDING'})
         const response  = await productService.fetchSimilarProducts(productId)
         dispatch({ type: 'SIMILAR_PRODUCT_SUCCESS', payload: response})
     }

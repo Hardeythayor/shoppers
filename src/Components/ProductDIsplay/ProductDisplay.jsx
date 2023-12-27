@@ -31,7 +31,7 @@ const ProductDisplay = (props) => {
                                     onClick={() => setSelectedImage(i)}
                                     key={i}
                                 >
-                                    <img className={`${selectedImage == i ? 'bordered' : ''} img-fluid`} src={e} alt="" />
+                                    <img className={`${selectedImage === i ? 'bordered' : ''} img-fluid`} src={e} alt="" />
                                 </div>
                             ))}
                         </div>

@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const Popular = () => {
-    const {dispatch, trendingProducts, isLoading}  = useContext(ShopContext)
+    const {dispatch, trendingProducts}  = useContext(ShopContext)
 
     const fetchTrendingProducts = async() => {
         dispatch({ type: 'IS_PENDING'})

@@ -5,13 +5,11 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
-import axiosInstance from '../../hooks/axiosInstance';
 import { errorNotify, successNotify } from '../../utils/toaster'
 import { useNavigate } from 'react-router-dom';
 
 const PromoCodeModal = ({ show, closeModal, productId }) => {
     const[isLoading, setIsLoading] = useState(false)
-    const[validationError, setValidationError] = useState({})
     const navigate = useNavigate()
 
     //  state to hold form data

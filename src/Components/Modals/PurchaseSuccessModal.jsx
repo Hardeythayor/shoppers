@@ -4,13 +4,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { useState } from 'react';
-import axiosInstance from '../../hooks/axiosInstance';
-import { errorNotify, successNotify } from '../../utils/toaster'
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 
 const PurchaseSuccessModal = ({ show, closeModal, user}) => {
-    const navigate = useNavigate()
 
     //  method to call then modal is closed
     const handleClose = () => {
