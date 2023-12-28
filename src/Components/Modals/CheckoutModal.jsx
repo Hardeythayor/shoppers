@@ -18,10 +18,14 @@ const CheckoutModal = ({ show, closeModal, productId }) => {
 
     //  state to hold form data
     const [formData, setFormData] = useState({
-        name: '',
+        firstname: '',
+        lastname: '',
         email: '',
         phone: '',
-        address: '',
+        houseNumber: '',
+        streetName: '',
+        city: '',
+        country: '',
         isRead: false,
         productId: ''
     })
@@ -29,11 +33,16 @@ const CheckoutModal = ({ show, closeModal, productId }) => {
     //  method to reset form fields to empty
     const resetForm  = () => {
         setFormData({
-            name: '',
+            firstname: '',
+            lastname: '',
             email: '',
             phone: '',
-            address: '',
-            isRead: false
+            houseNumber: '',
+            streetName: '',
+            city: '',
+            country: '',
+            isRead: false,
+            productId: ''
         })
     }
 
@@ -93,17 +102,31 @@ const CheckoutModal = ({ show, closeModal, productId }) => {
                 <Modal.Body>
                     <div className='mb-3'>
                         <label htmlFor='status' style={{display: 'block'}}>
-                            <span>Name</span>
+                            <span>Firstname</span>
                             <input 
                                 type='text' 
                                 className='form-control' 
-                                name='name'
+                                name='firstname'
                                 onChange={handleChange}
-                                value={formData.name}
+                                value={formData.firstname}
                                 required
                             />
                         </label>
-                        {validationError.name && <small className='text-danger my-1'>{validationError.name[0]}</small>}
+                        {validationError.firstname && <small className='text-danger my-1'>{validationError.firstname[0]}</small>}
+                    </div>
+                    <div className='mb-3'>
+                        <label htmlFor='status' style={{display: 'block'}}>
+                            <span>Lastname</span>
+                            <input 
+                                type='text' 
+                                className='form-control' 
+                                name='lastname'
+                                onChange={handleChange}
+                                value={formData.lastname}
+                                required
+                            />
+                        </label>
+                        {validationError.lastname && <small className='text-danger my-1'>{validationError.lastname[0]}</small>}
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='status' style={{display: 'block'}}>
@@ -135,17 +158,59 @@ const CheckoutModal = ({ show, closeModal, productId }) => {
                     </div>
                     <div className='mb-3'>
                         <label htmlFor='status' style={{display: 'block'}}>
-                            <span>Delivery Address</span>
-                            <textarea 
+                            <span>House Number</span>
+                            <input 
+                                type='text' 
                                 className='form-control' 
-                                name='address'
+                                name='houseNumber'
                                 onChange={handleChange}
-                                value={formData.address}
+                                value={formData.houseNumber}
                                 required
-                                rows={3}
-                            ></textarea>
+                            />
                         </label>
-                        {validationError.address && <small className='text-danger my-1'>{validationError.address[0]}</small>}
+                        {validationError.houseNumber && <small className='text-danger my-1'>{validationError.houseNumber[0]}</small>}
+                    </div>
+                    <div className='mb-3'>
+                        <label htmlFor='status' style={{display: 'block'}}>
+                            <span>Street Name</span>
+                            <input 
+                                type='text' 
+                                className='form-control' 
+                                name='streetName'
+                                onChange={handleChange}
+                                value={formData.streetName}
+                                required
+                            />
+                        </label>
+                        {validationError.streetName && <small className='text-danger my-1'>{validationError.streetName[0]}</small>}
+                    </div>
+                    <div className='mb-3'>
+                        <label htmlFor='status' style={{display: 'block'}}>
+                            <span>City</span>
+                            <input 
+                                type='text' 
+                                className='form-control' 
+                                name='city'
+                                onChange={handleChange}
+                                value={formData.city}
+                                required
+                            />
+                        </label>
+                        {validationError.city && <small className='text-danger my-1'>{validationError.city[0]}</small>}
+                    </div>
+                    <div className='mb-3'>
+                        <label htmlFor='status' style={{display: 'block'}}>
+                            <span>Country</span>
+                            <input 
+                                type='text' 
+                                className='form-control' 
+                                name='country'
+                                onChange={handleChange}
+                                value={formData.country}
+                                required
+                            />
+                        </label>
+                        {validationError.country && <small className='text-danger my-1'>{validationError.country[0]}</small>}
                     </div>
                     <div className='mb-3'>
                         <div className="form-check">

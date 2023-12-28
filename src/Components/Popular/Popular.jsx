@@ -27,7 +27,12 @@ const Popular = () => {
   return (
     <div className="container">
         <div className='popular'>
-            <h1>TRENDING COLLECTIONS</h1>
+            <h1>AUTOGRAPHED ROLEXES</h1>
+            <p>
+                Rolexes signed by various celebrities. Purchase of any rolex from 
+                this field comes with a signed club shirt, a followback on instagram from the 
+                celebrity handle and a lifetime access to the celebrity's VIP fans group chat
+            </p>
             <hr />
             
             <Swiper 

@@ -9,6 +9,11 @@
     font-size: 30px;
     font-weight: 600;
 }
+.popular p{
+    font-weight: 550;
+    margin-bottom: 0;
+    text-align: center;
+}
 
 .popular hr {
     width: 200px;

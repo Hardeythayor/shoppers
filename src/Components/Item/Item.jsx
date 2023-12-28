@@ -34,10 +34,10 @@ const Item = (props) => {
         <p>{props.name}</p>
         <div className="item-prices">
           <div className="item-price-new">
-              ₦{props.new_price ? Number(props.new_price).toLocaleString() : Number(props.old_price).toLocaleString()}
+              ${props.new_price ? Number(props.new_price).toLocaleString() : Number(props.old_price).toLocaleString()}
           </div>
           {props.new_price && <div className="item-price-old">
-              ₦{Number(props.old_price).toLocaleString()}
+              ${Number(props.old_price).toLocaleString()}
           </div>}
         </div>
         <div className="item-warranty">

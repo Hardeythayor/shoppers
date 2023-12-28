@@ -31,30 +31,30 @@ const Navbar = () => {
                             </NavLink>
                             {menu === 'shop' ? <hr /> : <></>}
                         </li>
-                        <li className="nav-item" onClick={() => setMenu("mens")}
+                        <li className="nav-item" onClick={() => setMenu("golf")}
                         >
-                            <NavLink className="nav-link" to="/mens">
-                                Men
+                            <NavLink className="nav-link" to="/golf">
+                                Golf
                             </NavLink>
-                            {menu === 'mens' ? <hr /> : <></>}
+                            {menu === 'golf' ? <hr /> : <></>}
                         </li>
-                        <li className="nav-item" onClick={() => setMenu("womens")}>
-                            <NavLink className="nav-link" to="/womens">
-                                Women
+                        <li className="nav-item" onClick={() => setMenu("soccer")}>
+                            <NavLink className="nav-link" to="/soccer">
+                                Soccer / Football
                             </NavLink>
-                            {menu === 'womens' ? <hr /> : <></>}
+                            {menu === 'soccer' ? <hr /> : <></>}
                         </li>
-                        <li className="nav-item" onClick={() => setMenu("kids")}>
-                            <NavLink className="nav-link" to="/kids">
-                                Kids
+                        <li className="nav-item" onClick={() => setMenu("american_football")}>
+                            <NavLink className="nav-link" to="/american-football">
+                                American Football
                             </NavLink>
-                            {menu === 'kids' ? <hr /> : <></>}
+                            {menu === 'american_football' ? <hr /> : <></>}
                         </li>
-                        <li className="nav-item" onClick={() => setMenu("unisex")}>
-                            <NavLink className="nav-link" to="/unisex">
-                                Unisex
+                        <li className="nav-item" onClick={() => setMenu("cricket")}>
+                            <NavLink className="nav-link" to="/cricket">
+                                Cricket
                             </NavLink>
-                            {menu === 'unisex' ? <hr /> : <></>}
+                            {menu === 'cricket' ? <hr /> : <></>}
                         </li>
                     </ul>
                     {/* <div className="nav-login">

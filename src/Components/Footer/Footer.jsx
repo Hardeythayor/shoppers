@@ -20,9 +20,10 @@ const Footer = () => {
             <li>Contact</li>
         </ul>
         <div className="footer-social-icon">
-            <div className="footer-icons-container">
+            <a href='https://www.instagram.com/rolex?igsh=YzAwZjE1ZTI0Zg==' 
+              className="footer-icons-container" target='_blank' rel="noreferrer">
                 <img src={instagram_icon} alt="" />
-            </div>
+            </a>
             <div className="footer-icons-container">
                 <img src={whatsapp_icon} alt="" />
             </div>

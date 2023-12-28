@@ -51,12 +51,12 @@ const ProductDisplay = (props) => {
                         <div className="product-display-right-prices">
                             {product && product.new_price && (
                                 <div className="product-display-right-price-old">
-                                    ₦{Number(product.price).toLocaleString()}
+                                    ${Number(product.price).toLocaleString()}
                                 </div>
                             )}
                             {product && (
                                 <div className="product-display-right-price-new">
-                                    ₦{product.new_price ? Number(product.new_price).toLocaleString() : Number(product.price).toLocaleString()}
+                                    ${product.new_price ? Number(product.new_price).toLocaleString() : Number(product.price).toLocaleString()}
                                 </div>
                             )}
                         </div>
